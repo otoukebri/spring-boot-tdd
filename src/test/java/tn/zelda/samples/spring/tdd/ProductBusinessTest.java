@@ -26,7 +26,8 @@ public class ProductBusinessTest {
     ProductsRepository productsRepository;
 
     @Test
-    public void getProductsTestOk() { when(productsRepository.getAll()).thenReturn(Arrays.asList(new Product()));
+    public void getProductsTestOk() {
+        when(productsRepository.getAll()).thenReturn(Arrays.asList(new Product()));
        assertEquals( 0, productsBusiness.getProducts().get(0).getId());
     }
 
